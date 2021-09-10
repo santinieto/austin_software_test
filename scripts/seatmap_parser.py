@@ -11,7 +11,7 @@ import sys
 
 # Global variables
 #main_path = 'C:/Users/santi/Desktop/APIEngineerTechnicalExercise_v2 (1)/APIEngineerTechnicalExercise_v2/' # Absolute path (in my case)
-main_path = './' # Relative path
+main_path = './../seatmaps/' # Relative path
 
 # Get prefixes for the selected file
 def get_prefixes(filename = 'seatmap1.xml'):
@@ -164,7 +164,7 @@ def scripts_for_file_2(filename = 'seatmap2.xml', ns = ''):
 def save_object_as_json(mdicc, filename = 'seatmap1.json'):
     # Once i have the diccionary for the seats i an able to transform it to a JSON object  
     # Store the JSON object in a file
-    with open(filename, 'w', encoding = 'utf-8') as f:
+    with open('./../results/' + filename, 'w', encoding = 'utf-8') as f:
         json.dump(mdicc, f, indent = 4)
 
 if __name__ == "__main__" :
